@@ -1,6 +1,6 @@
 # Bank Marketing — Term Deposit Subscription Classification
 
-M.Tech (AIML/DSE) — Machine Learning — Assignment 2
+Machine Learning — Assignment 2
 
 ## a. Problem Statement
 
@@ -58,7 +58,7 @@ scoring.
 
 ## c. GitHub Repository Link
 
-`<PASTE YOUR GITHUB REPO URL HERE AFTER YOU PUSH>`
+`https://github.com/2025ad05029/Bank_marketing_classification`
 
 ## d. Models Used
 
@@ -86,44 +86,7 @@ and evaluated on the same hold-out test split.
 | Random Forest (Ensemble) | **Best overall** on Accuracy, AUC, Precision, and MCC — averaging many trees generalizes better than a single tree or a linear model on this feature mix, though its recall (0.24) is still limited by the severe class imbalance. |
 | **Overall Winner** | **Random Forest (Ensemble)** — best AUC and MCC, meaning it ranks customers by subscription likelihood most reliably, which is exactly what the bank needs to prioritize its call list. All models show low recall due to the ~89/11 class imbalance and the removal of the leaky `duration` feature — a class-imbalance technique (e.g. SMOTE or class-weighting) would be a natural next step to explore. |
 
-## Repository Structure
-
-```
-project-folder/
-│-- app.py                       # Streamlit app
-│-- train.py                     # Trains all 5 models, saves pipelines + metrics
-│-- requirements.txt
-│-- runtime.txt                  # Pins Python 3.11 for consistent deployment
-│-- README.md
-│-- test_data.csv                # Held-out test split (upload this in the app)
-│-- bank_marketing.csv           # Full raw dataset (for reference)
-│-- model/
-│   │-- logistic_regression.pkl
-│   │-- decision_tree.pkl
-│   │-- knn.pkl
-│   │-- naive_bayes.pkl
-│   │-- random_forest_ensemble.pkl
-│   │-- metrics_comparison.csv
-│   └-- schema.json
-```
-
-## Streamlit App Features
-
-- 📁 CSV upload (upload `test_data.csv`)
-- ⚙️ Model selection dropdown (choose among the 5 trained models)
-- 📈 Live evaluation metrics (Accuracy, AUC, Precision, Recall, F1, MCC)
-- 🔢 Confusion matrix + classification report
-- 📊 Pre-computed comparison table across all models
-- ⬇️ Download predictions as CSV
-
-## How to Run Locally
-
-```bash
-pip install -r requirements.txt
-python train.py          # retrains models (optional — .pkl files already included)
-streamlit run app.py
-```
 
 ## Live App
 
-`<PASTE YOUR STREAMLIT COMMUNITY CLOUD LINK HERE>`
+`https://bankmarketingclassification-r5kjehlnlc9etwh6twkrfk.streamlit.app/`
