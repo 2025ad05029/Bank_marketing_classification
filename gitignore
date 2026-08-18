@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large / local-only data (keep only test_data.csv tracked in the repo)
+bank_marketing.csv
+bank-additional-full.csv
+
+# Streamlit
+.streamlit/secrets.toml
